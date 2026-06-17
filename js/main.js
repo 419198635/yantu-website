@@ -165,9 +165,12 @@ function initContactForm() {
       message: form.querySelector('#message')?.value || '',
     };
 
-    fetch('/api/contact', {
+    fetch('https://formsubmit.co/ajax/contact@yantu.net.cn', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify(formData),
     })
       .then(res => res.json())
