@@ -121,6 +121,10 @@ function initContactForm() {
   const form = document.querySelector('.contact-form form');
   if (!form) return;
 
+  // Decode obfuscated endpoint at runtime
+  const _ep = 'Y29udGFjdEB5YW50dS5uZXQuY24=';
+  const endpoint = 'https://formsubmit.co/ajax/' + atob(_ep);
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -165,7 +169,7 @@ function initContactForm() {
       message: form.querySelector('#message')?.value || '',
     };
 
-    fetch('https://formsubmit.co/ajax/contact@yantu.net.cn', {
+    fetch(endpoint, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
