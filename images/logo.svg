@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A4B8C"/>
+      <stop offset="50%" style="stop-color:#2563C7"/>
+      <stop offset="100%" style="stop-color:#1E5AB5"/>
+    </linearGradient>
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6F0FF"/>
+      <stop offset="100%" style="stop-color:#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circle background (Xueqiu is a circle) -->
+  <circle cx="60" cy="60" r="56" fill="url(#bg)"/>
+
+  <!-- Inner snowball circle (the "core" shape) -->
+  <circle cx="60" cy="60" r="28" fill="none" stroke="url(#snowGrad)" stroke-width="3.5" opacity="0.9"/>
+
+  <!-- Snowball surface lines (suggesting the snowball texture) -->
+  <!-- Horizontal curve -->
+  <path d="M 42 60 Q 60 52 78 60" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Horizontal curve 2 -->
+  <path d="M 44 68 Q 60 76 76 68" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <!-- Vertical curve -->
+  <path d="M 60 38 Q 52 60 60 78" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Vertical curve 2 -->
+  <path d="M 68 38 Q 76 60 68 78" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Small accent arcs (Xueqiu style sweeping motion) -->
+  <path d="M 30 40 Q 20 60 30 80" fill="none" stroke="#4299E1" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <path d="M 90 40 Q 100 60 90 80" fill="none" stroke="#4299E1" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+</svg>
